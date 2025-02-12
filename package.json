@@ -2,7 +2,7 @@
   "name": "projekt_1",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "start": "nun run src/index.ts"
+    "start": "bun run src/index.ts"
   },
   "dependencies": {
     "bun": "^1.2.2",
