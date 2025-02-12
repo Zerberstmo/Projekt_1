@@ -34,6 +34,20 @@ app.get("/reset", (c) => {
   state = 0;
   return c.text("Zurück gesetzt");
 });
+app.get("/crash", (c) => {
+  process.exit(1);
+});
+
+function stressCpu() {
+  while (true) {
+    Math.sqrt(Math.random());
+  }
+}
+
+app.get("/stress", (c) => {
+  stressCpu();
+  return c.text("running stress");
+});
 
 export default {
   fetch: app.fetch,
